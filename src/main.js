@@ -8,6 +8,7 @@ import en from "./locales/en.json"
 import gr from "./locales/gr.json"
 import LanguageSelector from "./components/UI/LanguageSelector.vue";
 import '../src/fonts.css'
+import router from './router';
 
 const messages={
     en: en,
@@ -20,7 +21,12 @@ const i18n= createI18n({
     messages,
 })
 
-const app = createApp(App)
-app.use(i18n).mount('#app')
+const app = createApp(App);
+// plugins
+app.use(i18n);
+app.use(router);
+
 // Registering the LanguageSelector component globally
-app.component('LanguageSelector', LanguageSelector)
+app.component('LanguageSelector', LanguageSelector);
+
+app.mount('#app');

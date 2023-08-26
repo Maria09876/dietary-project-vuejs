@@ -27,15 +27,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a
+            <router-link to="/"
               class="nav-link active menuSection"
               aria-current="page"
-              href="#"
-              >{{ $t("home") }}</a
+              >{{ $t("home") }}</router-link
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link menuSection" href="#">{{ $t("vitamins") }}</a>
+            <router-link to="/nutrition" class="nav-link menuSection">{{ $t("nutrition") }}</router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link menuSection" href="#">
